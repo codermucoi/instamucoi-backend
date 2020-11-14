@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    image: manhcuongdtbk/instamucoi-api
+    stdin_open: true
+    tty: true
+    depends_on:
+      - database
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/instamucoi-api
+      - bundle:/usr/local/bundle
+    env_file:
+      - docker/env/development/instamucoi-api
+    networks:
+      - instamucoi-network
+    command: ["./docker/scripts/wait-for-it.sh", "database:3306" , "--", "docker/scripts/entrypoint.sh", "rails", "server", "-b", "0.0.0.0"]
+
+  database:
+    image: mysql:8.0.22
+    env_file:
+      - docker/env/development/instamucoi-database
+    volumes:
+      - database-data:/var/lib/mysql
+    networks:
+      - instamucoi-network
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  bundle:
+  database-data:
+
+networks:
+  instamucoi-network:
+    external:
+      name: instamucoi-network

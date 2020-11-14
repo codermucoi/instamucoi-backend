@@ -1,0 +1,4 @@
+MYSQL_HOST=database
+MYSQL_USERNAME=root
+MYSQL_PASSWORD=root
+MYSQL_SOCKET=/var/run/mysqld/mysqld.sock
