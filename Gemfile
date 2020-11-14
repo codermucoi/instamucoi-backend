@@ -12,6 +12,9 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 6.1'
+  gem 'faker', '~> 2.14'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'rubocop', '~> 1.3', require: false
   gem 'rubocop-performance', '~> 1.8', '>= 1.8.1', require: false
   gem 'rubocop-rails', '~> 2.8', '>= 2.8.1', require: false
@@ -22,6 +25,11 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
+  gem 'simplecov', '~> 0.19.1', require: false
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

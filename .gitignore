@@ -29,3 +29,6 @@
 
 # Ignore editor settings
 .vscode
+
+# Ignore code coverage files
+coverage
