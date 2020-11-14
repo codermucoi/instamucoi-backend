@@ -261,7 +261,6 @@ DEPENDENCIES
   brakeman
   bullet (~> 6.1)
   bundler-audit (~> 0.7.0.1)
-  byebug
   factory_bot_rails (~> 6.1)
   faker (~> 2.14)
   fasterer
