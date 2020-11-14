@@ -12,7 +12,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 
 group :development, :test do
   gem 'bullet', '~> 6.1'
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.1'
   gem 'faker', '~> 2.14'
   gem 'pry-byebug'
