@@ -29,6 +29,7 @@ group :development do
   gem 'brakeman', require: false
   gem 'bundler-audit', '~> 0.7.0.1', require: false
   gem 'fasterer', require: false
+  gem 'letter_opener', '~> 1.7'
   gem 'listen', '~> 3.2'
   gem 'rails_best_practices', require: false
   gem 'spring'
