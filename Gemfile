@@ -23,6 +23,7 @@ end
 
 group :development do
   gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'bundler-audit', '~> 0.7.0.1', require: false
   gem 'fasterer', require: false
   gem 'listen', '~> 3.2'
   gem 'spring'
