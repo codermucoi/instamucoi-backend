@@ -49,6 +49,7 @@ Layout/ClassStructure:
       - after_commit
       - after_rollback
     macros:
+      - has_secure_password
       - enum
       - validates
       - validate
