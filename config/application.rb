@@ -35,5 +35,8 @@ module InstamucoiBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Default Rails time zone
+    config.time_zone = 'Hanoi'
   end
 end
