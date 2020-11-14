@@ -1,0 +1,87 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+Layout/ClassStructure:
+  Enabled: true
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - association
+    - public_attribute_macros
+    - public_delegate
+    - macros
+    - callbacks
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+  Categories:
+    association:
+      - has_many
+      - has_one
+      - belongs_to
+      - has_and_belongs_to_many
+    attribute_macros:
+      - attr_accessor
+      - attr_reader
+      - attr_writer
+    callbacks:
+      - before_validation
+      - after_validation
+      - before_create
+      - before_update
+      - before_save
+      - before_destroy
+      - after_create
+      - after_update
+      - after_save
+      - after_destroy
+      - around_create
+      - around_update
+      - around_save
+      - around_destroy
+      - after_commit
+      - after_rollback
+    macros:
+      - enum
+      - validates
+      - validate
+      - scope
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+
+Layout/LineLength:
+  Max: 130
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Max: 30
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Metrics/MethodLength:
+  Max: 25
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.7.2
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'Rakefile'
+    - 'db/schema.rb'
